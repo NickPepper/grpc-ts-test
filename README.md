@@ -1,5 +1,7 @@
 # grpc-ts-test
 
+WOW! There is NO NEED to have the other tools (or npm global package) to be installed globally (such as protoc, grpc_tools etc).
+
 To get started, make sure to install the NPM dependencies:
 
 `$ npm install`
