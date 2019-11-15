@@ -65,12 +65,11 @@ class ServerImpl implements IBookServiceServer {
     }
 }
 
-
 function startServer() {
   const server = new grpc.Server();
 
   server.addService(BookServiceService, new ServerImpl());
-  server.bind("127.0.0.1:50051", grpc.ServerCredentials.createInsecure());
+  server.bind("127.0.0.1:50051", grpc.ServerCredentials.createInsecure()); // TODO: !!! make Secure for production !!!
   server.start();
 
   log("Server started, listening: 127.0.0.1:50051");
